@@ -54,7 +54,7 @@
     slots:
     - HEAD
   - type: Speech # for pais (In the secret stash)
-    speechVerb: Vulpkanin 
+    speechVerb: Vulpkanin
     speechSounds: Vulpkanin
     allowedEmotes: ['Bark', 'Snarl', 'Whine', 'Howl', 'Awoo', 'Growl', 'Yap', 'Gekker']
   - type: Vocal
@@ -128,9 +128,9 @@
     slots:
     - HEAD
   - type: Speech # for pais (In the secret stash)
-    speechVerb: Reptilian 
+    speechVerb: Reptilian
     speechSounds: Lizard
-    allowedEmotes: ['Thump', 'ReptilianHiss']
+    allowedEmotes: ['Thump', 'Hiss']
   - type: Vocal
     sounds:
       Male: MaleReptilian

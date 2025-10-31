@@ -72,7 +72,7 @@
       collection: FemaleCoughs
     Yawn:
       collection: FemaleYawn
-    Hisses:
+    Hiss:
       collection: FelionoidHisses
     Purr:
       collection: FelionoidPurrs
@@ -99,7 +99,7 @@
       collection: ResomiLaugh
     Bark: # HardLight - JuiceThatMakesYouBark
       collection: VulpkaninBarks
-    Hisses:
+    Hiss:
       collection: FelionoidHisses
     Purr:
       collection: FelionoidPurrs
@@ -203,7 +203,7 @@
       path: /Audio/_Starlight/Voice/Shadekin/mar.ogg
     Wurble:
       path: /Audio/_Starlight/Voice/Shadekin/wurble.ogg
-    Hisses:
+    Hiss:
       collection: FelionoidHisses
     Purr:
       collection: FelionoidPurrs
@@ -262,7 +262,7 @@
   params:
     variation: 0.1
   sounds:
-    Hisses:
+    Hiss:
       # Use miscellaneous low hiss set for xeno hissing
       path: /Audio/Voice/Misc/lowHiss1.ogg
     Scream:
