@@ -1,4 +1,9 @@
-#if ENABLE_MONO_RADAR
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 ark1368
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 namespace Content.Server._Mono.Radar;
 
 using Content.Shared._Mono.Radar;
@@ -38,6 +43,12 @@ public sealed partial class RadarBlipComponent : Component
     /// </summary>
     [DataField]
     public bool RequireNoGrid = false;
+
+    /// <summary>
+    /// Whether this blip should be visible on radar across different grids.
+    /// </summary>
+    [DataField]
+    public bool VisibleFromOtherGrids = true;
 
     [DataField]
     public bool Enabled = true;

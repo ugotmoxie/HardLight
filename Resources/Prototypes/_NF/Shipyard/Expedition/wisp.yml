@@ -7,10 +7,17 @@
 - type: vessel
   id: Wisp
   parent: BaseVessel
+<<<<<<< HEAD:Resources/Prototypes/_NF/Shipyard/Expedition/wisp.yml
   name: NTC Wisp
   description: A small, fast salvage and expedition ship.
   price: 35000 # base value 27480, not worth this at all tbh.
   category: Small
+=======
+  name: SKR Archon
+  description: A entry level expedition ship, outfitted with bare essentials.
+  price: 65820
+  category: Medium
+>>>>>>> 6f84c45a50b (anotha charon buff (#237)):Resources/Prototypes/_Mono/Shipyard/Expedition/archon.yml
   group: Expedition
   shuttlePath: /Maps/_NF/Shuttles/Expedition/wisp.yml
   guidebookPage: Null

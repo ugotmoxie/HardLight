@@ -1,3 +1,25 @@
+// SPDX-FileCopyrightText: 2024 ArchRBX
+// SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 Wiebe Geertsma
+// SPDX-FileCopyrightText: 2024 eoineoineoin
+// SPDX-FileCopyrightText: 2024 exincore
+// SPDX-FileCopyrightText: 2024 leonarudo
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2024 neuPanda
+// SPDX-FileCopyrightText: 2025 Alex Parrill
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Blu
+// SPDX-FileCopyrightText: 2025 BlueHNT
+// SPDX-FileCopyrightText: 2025 GreaseMonk
+// SPDX-FileCopyrightText: 2025 Ilya246
+// SPDX-FileCopyrightText: 2025 LukeZurg22
+// SPDX-FileCopyrightText: 2025 RikuTheKiller
+// SPDX-FileCopyrightText: 2025 Whatstone
+// SPDX-FileCopyrightText: 2025 ark1368
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using System.Numerics;
 using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.Shuttles.Components;
@@ -473,8 +495,8 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         var origin = ScalePosition(-new Vector2(Offset.X, -Offset.Y));
         handle.DrawLine(origin, origin + angle.ToVec() * ScaledMinimapRadius * 1.42f, Color.Red.WithAlpha(0.1f));
 
-        // Get raw blips with grid information
-        var rawBlips = _blips.GetRawBlips();
+        // Get blips
+        var rawBlips = _blips.GetCurrentBlips();
 
         // Prepare view bounds for culling
         var blipViewBounds = new Box2(-3f, -3f, Size.X + 3f, Size.Y + 3f);
@@ -482,125 +504,48 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         // Draw blips using the same grid-relative transformation approach as docks
         foreach (var blip in rawBlips)
         {
-            Vector2 blipPosInView;
-
-            // Handle differently based on if there's a grid
-            if (blip.Grid == null)
-            {
-                // For world-space blips without a grid, use standard world transformation
-                blipPosInView = Vector2.Transform(blip.Position, worldToShuttle * shuttleToView);
-            }
-            else if (EntManager.TryGetEntity(blip.Grid, out var gridEntity))
-            {
-                // For grid-relative blips, transform using the grid's transform
-                var gridToWorld = _transform.GetWorldMatrix(gridEntity.Value);
-                var gridToView = gridToWorld * worldToShuttle * shuttleToView;
-
-                // Transform the grid-local position
-                blipPosInView = Vector2.Transform(blip.Position, gridToView);
-            }
-            else
-            {
-                // Skip blips with invalid grid references
-                continue;
-            }
+            var blipPosInView = Vector2.Transform(_transform.ToMapCoordinates(blip.Position).Position, worldToShuttle * shuttleToView);
 
             // Check if this blip is within view bounds before drawing
-            if (blipViewBounds.Contains(blipPosInView))
+            if (monoViewBounds.Contains(blipPosInView))
             {
                 DrawBlipShape(handle, blipPosInView, blip.Scale * 3f, blip.Color.WithAlpha(0.8f), blip.Shape);
             }
         }
-    }
 
-    /// <summary>
-    /// Frontier: Checks if an IFF marker should be drawn based on distance and maximum IFF range.
-    /// </summary>
-    private bool NFCheckShouldDrawIffRangeCondition(bool shouldDrawIff, Vector2 distance)
-    {
-        if (shouldDrawIff && MaximumIFFDistance >= 0.0f)
+        // Draw hitscan lines from the radar blips system
+        var hitscanLines = _blips.GetHitscanLines();
+        foreach (var line in hitscanLines)
         {
-            if (distance.Length() > MaximumIFFDistance)
-                shouldDrawIff = false;
-        }
-        return shouldDrawIff;
-    }
+            var startPosInView = Vector2.Transform(line.Start, worldToShuttle * shuttleToView);
+            var endPosInView = Vector2.Transform(line.End, worldToShuttle * shuttleToView);
 
-    /// <summary>
-    /// Frontier: Adds a blip to the list for later drawing.
-    /// </summary>
-    private static void NFAddBlipToList(List<BlipData> blipDataList, bool isOutsideRadarCircle, Vector2 uiPosition, int uiXCentre, int uiYCentre, Color color)
-    {
-        blipDataList.Add(new BlipData
-        {
-            IsOutsideRadarCircle = isOutsideRadarCircle,
-            UiPosition = uiPosition,
-            VectorToPosition = uiPosition - new Vector2(uiXCentre, uiYCentre),
-            Color = color
-        });
-    }
-
-    /// <summary>
-    /// Frontier: Adds blip style triangles on ship edges or towards ships.
-    /// </summary>
-    private void NFDrawBlips(DrawingHandleBase handle, List<BlipData> blipDataList)
-    {
-        var blipValueList = new Dictionary<Color, ValueList<Vector2>>();
-
-        foreach (var blipData in blipDataList)
-        {
-            var triangleShapeVectorPoints = new[]
+            // Only draw lines if at least one endpoint is within view
+            if (monoViewBounds.Contains(startPosInView) || monoViewBounds.Contains(endPosInView))
             {
-                new Vector2(0, 0),
-                new Vector2(RadarBlipSize, 0),
-                new Vector2(RadarBlipSize * 0.5f, RadarBlipSize)
-            };
+                // Draw the line with the specified thickness and color
+                handle.DrawLine(startPosInView, endPosInView, line.Color);
 
-            if (blipData.IsOutsideRadarCircle)
-            {
-                var angle = (float)Math.Atan2(blipData.VectorToPosition.Y, blipData.VectorToPosition.X) + -1.6f;
-                var cos = (float)Math.Cos(angle);
-                var sin = (float)Math.Sin(angle);
-                float[,] rotationMatrix = { { cos, -sin }, { sin, cos } };
-
-                for (var i = 0; i < triangleShapeVectorPoints.Length; i++)
+                // For thicker lines, draw multiple lines side by side
+                if (line.Thickness > 1.0f)
                 {
-                    var vertex = triangleShapeVectorPoints[i];
-                    var x = vertex.X * rotationMatrix[0, 0] + vertex.Y * rotationMatrix[0, 1];
-                    var y = vertex.X * rotationMatrix[1, 0] + vertex.Y * rotationMatrix[1, 1];
-                    triangleShapeVectorPoints[i] = new Vector2(x, y);
+                    // Calculate perpendicular vector for thickness
+                    var dir = (endPosInView - startPosInView).Normalized();
+                    var perpendicular = new Vector2(-dir.Y, dir.X) * 0.5f;
+
+                    // Draw additional lines for thickness
+                    for (float i = 1; i <= line.Thickness; i += 1.0f)
+                    {
+                        var offset = perpendicular * i;
+                        handle.DrawLine(startPosInView + offset, endPosInView + offset, line.Color);
+                        handle.DrawLine(startPosInView - offset, endPosInView - offset, line.Color);
+                    }
                 }
             }
-
-            var triangleCenterVector =
-                (triangleShapeVectorPoints[0] + triangleShapeVectorPoints[1] + triangleShapeVectorPoints[2]) / 3;
-
-            var vectorsFromCenter = new Vector2[3];
-            for (int i = 0; i < 3; i++)
-            {
-                vectorsFromCenter[i] = (triangleShapeVectorPoints[i] - triangleCenterVector) * UIScale;
-            }
-
-            var newVerts = new Vector2[3];
-            for (var i = 0; i < 3; i++)
-            {
-                newVerts[i] = (blipData.UiPosition * UIScale) + vectorsFromCenter[i];
-            }
-
-            if (!blipValueList.TryGetValue(blipData.Color, out var valueList))
-            {
-                valueList = new ValueList<Vector2>();
-            }
-            valueList.Add(newVerts[0]);
-            valueList.Add(newVerts[1]);
-            valueList.Add(newVerts[2]);
-            blipValueList[blipData.Color] = valueList;
         }
 
-        foreach (var color in blipValueList)
-        {
-            handle.DrawPrimitives(DrawPrimitiveTopology.TriangleList, color.Value.Span, color.Key);
-        }
+        ClearShader(handle);
+        #endregion
     }
 
     private void DrawBlipShape(DrawingHandleScreen handle, Vector2 position, float size, Color color, RadarBlipShape shape)
@@ -648,6 +593,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
             case RadarBlipShape.Arrow:
                 DrawArrow(handle, position, size, color);
                 break;
+            // Ring shapes are handled by DrawShieldRing for constant thickness
         }
     }
 
@@ -779,4 +725,18 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
     private const int RadarBlipSize = 15;
     private const int RadarFontSize = 10;
 
+    /// <summary>
+    /// Draws a shield ring with constant thickness regardless of zoom level.
+    /// </summary>
+    private void DrawShieldRing(DrawingHandleScreen handle, Vector2 position, float radius, Color color)
+    {
+        // Draw the shield outline as a ring with constant thickness
+        const float ringThickness = 2.0f; // Fixed thickness in pixels
+
+        // Draw multiple circles with slightly different radii to create a solid ring effect
+        for (float offset = 0; offset <= ringThickness; offset += 0.5f)
+        {
+            handle.DrawCircle(position, radius + offset, color.WithAlpha(0.5f), false);
+        }
+    }
 }

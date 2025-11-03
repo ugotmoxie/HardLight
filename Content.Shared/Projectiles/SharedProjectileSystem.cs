@@ -203,6 +203,33 @@ public abstract partial class SharedProjectileSystem : EntitySystem
         {
             args.Cancelled = true;
         }
+
+        // Check if any shield system wants to prevent collision
+        var ev = new ProjectileCollisionAttemptEvent(uid, args.OtherEntity);
+        RaiseLocalEvent(ref ev);
+
+        if (ev.Cancelled)
+        {
+            args.Cancelled = true;
+            return;
+        }
+
+        // Check if target and projectile are on different maps/z-levels
+        var projectileXform = Transform(uid);
+        var targetXform = Transform(args.OtherEntity);
+        if (projectileXform.MapID != targetXform.MapID)
+        {
+            args.Cancelled = true;
+            return;
+        }
+
+        // Define the tag constant
+        const string GunCanAimShooterTag = "GunCanAimShooter";
+
+        if ((component.Shooter == args.OtherEntity || component.Weapon == args.OtherEntity) &&
+            component.Weapon != null && _tag.HasTag(component.Weapon.Value, GunCanAimShooterTag) &&
+            TryComp(uid, out TargetedProjectileComponent? targeted) && targeted.Target == args.OtherEntity)
+            return;
     }
 
     public void SetShooter(EntityUid id, ProjectileComponent component, EntityUid shooterId)
@@ -245,3 +272,15 @@ public record struct ProjectileReflectAttemptEvent(EntityUid ProjUid, Projectile
 /// </summary>
 [ByRefEvent]
 public record struct ProjectileHitEvent(DamageSpecifier Damage, EntityUid Target, EntityUid? Shooter = null);
+
+/// <summary>
+/// Raised when a projectile is about to collide with an entity, allowing systems to prevent the collision
+/// </summary>
+[ByRefEvent]
+public record struct ProjectileCollisionAttemptEvent(EntityUid Projectile, EntityUid Target)
+{
+    /// <summary>
+    /// Whether the collision should be cancelled
+    /// </summary>
+    public bool Cancelled = false;
+}

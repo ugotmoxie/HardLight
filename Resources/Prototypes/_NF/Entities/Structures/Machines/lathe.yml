@@ -342,9 +342,19 @@
     dynamicPacks:
     - NFNfsdTechfabDynamicDeprecated
     - AdvancedAmmoRecipePack
-#  - type: EmagLatheRecipes
-#    emagStaticPacks:
-#    - NFNfsdTechfabDeprecatedEmag
+    # Mono start
+    - MonoTSFWeaponsDynamicMelee
+    - MonoTSFWeaponsDynamicRanged
+    - MonoTSFMiscDynamic
+    - MonoTSFAmmo
+    - UniversalShellAmmo
+    - UniversalRailgunAmmo
+    - UniversalMissileAmmo
+    - UniversalOrdinance
+    # Mono end
+  - type: EmagLatheRecipes
+    emagStaticPacks:
+    - NFNfsdTechfabDeprecatedEmag
   - type: PirateBountyItem # Mono
     id: Techfab
   - type: OreSiloClient
