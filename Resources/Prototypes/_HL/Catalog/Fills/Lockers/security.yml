@@ -1,7 +1,7 @@
 - type: entity
   id: HLLockerWardenFilledHardsuit
   suffix: Station, Filled, Hardsuit
-  parent: LockerWarden
+  parent: HLLockerWarden
   categories: []
   components:
   - type: EntityTableContainerFill

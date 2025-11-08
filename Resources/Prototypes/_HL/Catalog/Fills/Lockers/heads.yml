@@ -32,7 +32,7 @@
 - type: entity
   id: HLLockerQuarterMasterFilled
   suffix: Station, Filled
-  parent: LockerQuarterMaster
+  parent: HLLockerQuarterMaster
   components:
   - type: EntityTableContainerFill
     containers:
