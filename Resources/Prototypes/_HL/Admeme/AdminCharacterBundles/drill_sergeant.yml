@@ -3,7 +3,7 @@
   equipment:
     pocket1: PocketBluespaceTankGilm
     pocket2: WeaponPistolN1984Gilm
-    head: ClothingHeadHatNfsdCampaign
+    head: ClothingHeadHatDrillCampaign
     # neck:
     mask: CigarPlatinum
     eyes: ClothingEyesGlassesSunglassesWinter
@@ -22,7 +22,7 @@
   equipment:
     # pocket1:
     pocket2: DoorRemoteAll
-    head: ClothingHeadHatNfsdCampaign
+    head: ClothingHeadHatDrillCampaign
     neck: SyndicateWhistle
     # mask:
     eyes: ClothingEyesHudNfsd
@@ -107,3 +107,27 @@
     clothingVisuals:
       outerClothing:
       - state: equipped-OUTERCLOTHING
+
+# Hat
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatDrillCampaign
+  name: campaign hat
+  description: A wide-brimmed hat, often associated with drill sergeants.
+  suffix: Admin
+  components:
+  - type: Sprite
+    sprite: _HL/Admeme/Clothing/Head/drillcampaignhat.rsi
+    layers:
+    - state: icon
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Clothing
+    sprite: _HL/Admeme/Clothing/Head/drillcampaignhat.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
