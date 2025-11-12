@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 11/12/2025 11:57:47
-  entityCount: 23115
+  time: 11/12/2025 12:03:03
+  entityCount: 23116
 maps:
 - 1
 grids:
@@ -17800,7 +17800,7 @@ entities:
       pos: -8.5,-46.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -56143.18
+      secondsUntilStateChange: -56457.863
       state: Opening
   - uid: 392
     components:
@@ -53605,27 +53605,27 @@ entities:
     - type: Transform
       pos: 14.5,14.5
       parent: 2
-  - uid: 23111
+  - uid: 23110
     components:
     - type: Transform
       pos: -27.5,-61.5
       parent: 2
-  - uid: 23112
+  - uid: 23111
     components:
     - type: Transform
       pos: -28.5,-61.5
       parent: 2
-  - uid: 23113
+  - uid: 23112
     components:
     - type: Transform
       pos: -30.5,-61.5
       parent: 2
-  - uid: 23114
+  - uid: 23113
     components:
     - type: Transform
       pos: -31.5,-61.5
       parent: 2
-  - uid: 23115
+  - uid: 23114
     components:
     - type: Transform
       pos: -29.5,-61.5
@@ -55247,27 +55247,39 @@ entities:
     - type: Transform
       pos: -52.5,-21.5
       parent: 2
+- proto: CartridgeMPSSMHEAT
+  entities:
+  - uid: 23107
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -22.55782,2.4019823
+      parent: 2
+  - uid: 23115
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -22.45182,2.4019823
+      parent: 2
 - proto: CartridgeMPSSMMissile
   entities:
+  - uid: 23104
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -22.883968,2.4019823
+      parent: 2
   - uid: 23105
     components:
     - type: Transform
-      pos: -22.438875,2.598401
+      rot: -1.5707963267948966 rad
+      pos: -22.786123,2.4019823
       parent: 2
   - uid: 23106
     components:
     - type: Transform
-      pos: -22.45971,2.515067
-      parent: 2
-  - uid: 23107
-    components:
-    - type: Transform
-      pos: -22.45971,2.379651
-      parent: 2
-  - uid: 23108
-    components:
-    - type: Transform
-      pos: -22.45971,2.244234
+      rot: -1.5707963267948966 rad
+      pos: -22.688278,2.4019823
       parent: 2
 - proto: Catwalk
   entities:
@@ -113436,9 +113448,7 @@ entities:
       pos: -67.5,-12.5
       parent: 2
     - type: Battery
-      startingCharge: 49425.035
-    - type: ApcPowerReceiverBattery
-      enabled: True
+      startingCharge: 0
 - proto: PlushieArachind
   entities:
   - uid: 16240
@@ -148427,7 +148437,7 @@ entities:
     - type: DeviceLinkSink
       ports: []
     - type: Door
-      secondsUntilStateChange: -192435.48
+      secondsUntilStateChange: -192750.16
       sparkSound: !type:SoundCollectionSpecifier
         collection: sparks
       currentlyCrushing: []
@@ -149490,10 +149500,11 @@ entities:
       parent: 2
 - proto: WeaponLauncherMPSSMASM
   entities:
-  - uid: 23104
+  - uid: 23116
     components:
     - type: Transform
-      pos: -22.42846,2.733817
+      rot: -1.5707963267948966 rad
+      pos: -22.370283,2.3693676
       parent: 2
 - proto: WeaponWaterPistol
   entities:
@@ -149775,7 +149786,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -27.5,-33.5
       parent: 2
-  - uid: 23109
+  - uid: 23108
     components:
     - type: Transform
       rot: 3.141592653589793 rad
@@ -151000,7 +151011,7 @@ entities:
     - type: Transform
       pos: -23.5,-17.5
       parent: 2
-  - uid: 23110
+  - uid: 23109
     components:
     - type: Transform
       rot: 1.5707963267948966 rad

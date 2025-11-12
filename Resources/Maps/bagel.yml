@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 11/12/2025 11:52:02
-  entityCount: 27236
+  time: 11/12/2025 12:03:54
+  entityCount: 27237
 maps:
 - 1
 grids:
@@ -54815,7 +54815,7 @@ entities:
     - type: Transform
       pos: -8.433568,-5.5107408
       parent: 2
-  - uid: 27236
+  - uid: 27237
     components:
     - type: Transform
       pos: 238.36444,73.83216
@@ -55957,27 +55957,36 @@ entities:
     - type: Transform
       pos: 29.5,-13.5
       parent: 2
-- proto: CartridgeMPSSMMissile
+- proto: CartridgeMPSSMHEAT
   entities:
   - uid: 10285
     components:
     - type: Transform
-      pos: -27.40445,1.614011
-      parent: 2
-  - uid: 10286
-    components:
-    - type: Transform
-      pos: -27.40445,1.4794745
-      parent: 2
-  - uid: 10342
-    components:
-    - type: Transform
-      pos: -27.40445,1.5528581
+      rot: 3.141592653589793 rad
+      pos: -27.500467,1.3199096
       parent: 2
   - uid: 10344
     components:
     - type: Transform
-      pos: -27.40445,1.6507027
+      rot: 3.141592653589793 rad
+      pos: -27.507412,1.2296318
+      parent: 2
+- proto: CartridgeMPSSMMissile
+  entities:
+  - uid: 10286
+    components:
+    - type: Transform
+      pos: -27.528246,1.4935206
+      parent: 2
+  - uid: 10342
+    components:
+    - type: Transform
+      pos: -27.53519,1.4587984
+      parent: 2
+  - uid: 27236
+    components:
+    - type: Transform
+      pos: -27.521301,1.5837984
       parent: 2
 - proto: Catwalk
   entities:
@@ -123313,9 +123322,7 @@ entities:
       pos: -111.5,25.5
       parent: 2
     - type: Battery
-      startingCharge: 148388.12
-    - type: ApcPowerReceiverBattery
-      enabled: True
+      startingCharge: 0
 - proto: PlushieArachind
   entities:
   - uid: 19008
