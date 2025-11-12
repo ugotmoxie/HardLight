@@ -18,7 +18,7 @@
 - type: entity
   id: WeaponTurretL85Autocannon
   name: L85 20mm autocannon
-  parent: BallisticArtillery
+  parent: BallisticArtilleryUnanchorable
   description: A light 20mm ballistic autocannon designed for rapid fire and suppressing smaller targets at close range. Cheap, light, and can be remotely activated or linked up to a GCS.
   components:
   - type: StaticPrice
@@ -89,7 +89,7 @@
 - type: entity
   id: WeaponTurretRAC30
   name: RAC-30 Draupnir Autocannon
-  parent: BallisticArtillery
+  parent: BallisticArtilleryUnanchorable
   description: A more heavy duty rapid rife autocannon, firing a hail of rounds much like its namesake became a hail of spears.
   components:
   - type: StaticPrice
@@ -160,7 +160,7 @@
 - type: entity
   id: WeaponTurretDravon
   name: ADBP-7 DRAVON 57mm Autocannon
-  parent: BallisticArtillery
+  parent: BallisticArtilleryUnanchorable
   description: A single-barrel autocannon made by Aetherion Dynamics. Medium artillery piece with high fire rate but relatively low impact, firing HEAT shells to damage ship armor and systems. Can be remotely activated or linked up to a GCS.
   components:
   - type: StaticPrice
@@ -223,7 +223,7 @@
 - type: entity
   id: WeaponTurretAK570
   name: AK570 90mm heavy autocannon
-  parent: BallisticArtillery
+  parent: BallisticArtilleryUnanchorable
   description: A dual-barrel, heavy 90mm autocannon firing general-purpose APHE rounds, effective for sustained fire against medium targets. Can be remotely activated or linked up to a GCS.
   components:
   - type: StaticPrice
@@ -759,7 +759,7 @@
 - type: entity
   id: WeaponTurretAdderScattercannon
   name: Adder scattercannon
-  parent: BallisticArtillery
+  parent: BallisticArtilleryUnanchorable
   description: A large, twin-barrelled scatter cannon, firing burts of cannister shot to shred any incoming missiles or potential boarders. Uses a self loading mechanism similar to the anaconda hangun.
   components:
   - type: StaticPrice
@@ -828,7 +828,7 @@
 - type: entity
   id: WeaponTurretFang
   name: Fang heavy 100mm autocannon
-  parent: BallisticArtillery
+  parent: BallisticArtilleryUnanchorable
   description: A heavy 100mm autocannon of syndicate design, created during the corporate war. Made for shattering the hulls of NT crusiers. Uses a self loading mechanism similar to the anaconda hangun.
   components:
   - type: StaticPrice

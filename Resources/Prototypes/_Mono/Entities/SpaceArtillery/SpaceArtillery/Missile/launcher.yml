@@ -123,7 +123,7 @@
 - type: entity
   id: WeaponTurretVanyk
   name: ASM-302 pod
-  parent: BallisticArtillery
+  parent: BallisticArtilleryUnanchorable
   description: An escort missile pod manufactured by Aetherion Dynamics. Launches guided missiles for basic ship-to-ship combat and area denial. Can be remotely activated or linked to a GCS.
   components:
   - type: StaticPrice
@@ -185,7 +185,7 @@
 - type: entity
   id: WeaponTurretTovek
   name: ADMX-23 TOVEK Hybrid EMP Pod
-  parent: BallisticArtillery
+  parent: BallisticArtilleryUnanchorable
   description: A hybrid EMP missile pod by Aetherion Dynamics. Fires EMPHE warheads to disable and weaken enemy ships at long range. Can be remotely activated or linked to a GCS.
   components:
   - type: StaticPrice
@@ -234,7 +234,7 @@
 - type: entity
   id: WeaponTurretSerpentMissile
   name: Serpent torpedo launcher
-  parent: BallisticArtillery
+  parent: BallisticArtilleryUnanchorable
   description: A light torpedo launcher developed by the Syndicate during the corporate war, uses similar systems to the anaconda for self loading munitons.
   components:
   - type: StaticPrice

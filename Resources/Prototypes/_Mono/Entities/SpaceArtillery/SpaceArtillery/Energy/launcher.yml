@@ -19,7 +19,7 @@
 - type: entity
   id: WeaponTurretType35
   name: Type-35 MARAUDER-type plasma cannon
-  parent: BallisticArtillery
+  parent: BallisticArtilleryUnanchorable
   description: Launches magnetically contained balls of plasma at targets. Can be remotely activated, or linked up to a GCS.
   components:
   - type: StaticPrice
@@ -88,7 +88,7 @@
 - type: entity
   id: WeaponTurretType54
   name: Type-54C plasma autopulser
-  parent: BallisticArtillery
+  parent: BallisticArtilleryUnanchorable
   suffix: TSF ONLY, ADS ONLY
   description: A rapidly firing energy weapon, dealing a large amount of damage to its targets. Takes a long time to recharge.
   components:
@@ -237,7 +237,7 @@
 - type: entity
   id: WeaponTurretM25
   name: M25 mining pulser
-  parent: [ BallisticArtillery, BaseC2ContrabandUnredeemable ]
+  parent: [ BallisticArtilleryUnanchorable, BaseC2ContrabandUnredeemable ]
   description: Uses mechanisms to fire condensed energy. Destroys rock easily.
   components:
   - type: StaticPrice
@@ -306,7 +306,7 @@
 - type: entity
   id: WeaponTurretM220
   name: M220 RUBICON EMP launcher
-  parent: BallisticArtillery
+  parent: BallisticArtilleryUnanchorable
   description: Launches EMP projectiles at ships, disabling systems with powerful electromagnetic pulses. Ideal for non-lethal engagements and can be remotely activated or linked to a GCS.
   components:
   - type: StaticPrice
@@ -441,7 +441,7 @@
 - type: entity
   id: WeaponLaserTurretL1Phalanx
   name: L-1 Phalanx
-  parent: BallisticArtillery
+  parent: BallisticArtilleryUnanchorable
   description: A light laser emplactment designed by the Pantheon Collective, used to shred threats of all types
   components:
   - type: StaticPrice
@@ -713,7 +713,7 @@
 - type: entity
   id: WeaponTurretSunder
   name: Curio-1007 proton cannon "Sunder"
-  parent: BallisticArtillery
+  parent: BallisticArtilleryUnanchorable
   suffix: ADS ONLY
   description: A potent proton cannon from before the Fracture, known for melting holes through both inorganic and organic matter with ease.
   components:
@@ -782,7 +782,7 @@
 - type: entity
   id: WeaponTurretScythe
   name: Curio-1008 neutron repeater "Scythe"
-  parent: BallisticArtillery
+  parent: BallisticArtilleryUnanchorable
   suffix: ADS ONLY
   description: A steadily firing neutron repeater, dealing solid damage to most targets. A pre-fracture marvel of weapons technology
   components:
@@ -852,7 +852,7 @@
 - type: entity
   id: WeaponLaserTurretFlayer
   name: Curio-183 auto-coil "Flayer"
-  parent: BallisticArtillery
+  parent: BallisticArtilleryUnanchorable
   suffix: ADS ONLY
   description: A unique pre-fracture weapon, the Flayer fires a storm of tungsten alloy darts at near the speed of light, barraging targets to pieces.
   components:
