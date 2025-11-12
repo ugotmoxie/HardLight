@@ -549,6 +549,7 @@
   - type: ShipWeaponProjectile
   - type: RadarBlip
     scale: 0.65
+    visibleFromOtherGrids: true
     requireNoGrid: true
     shape: triangle
     # Mono end

@@ -33,6 +33,7 @@
   - type: RadarBlip
     radarColor: "#FCBA03"
     scale: 1
+    visibleFromOtherGrids: true
     requireNoGrid: true
     shape: hexagon
   - type: TimedDespawn
@@ -83,6 +84,7 @@
   - type: RadarBlip
     radarColor: "#FCBA03"
     scale: 1.5
+    visibleFromOtherGrids: true
     requireNoGrid: true
     shape: hexagon
   - type: TimedDespawn
@@ -133,6 +135,7 @@
   - type: RadarBlip
     radarColor: "#FCBA03"
     scale: 4
+    visibleFromOtherGrids: true
     requireNoGrid: true
     shape: hexagon
   - type: TimedDespawn
@@ -183,6 +186,7 @@
   - type: RadarBlip
     radarColor: "#FB00FF"
     scale: 1
+    visibleFromOtherGrids: true
     requireNoGrid: true
     shape: hexagon
   - type: TimedDespawn
@@ -237,6 +241,7 @@
   - type: RadarBlip
     radarColor: "#FCBA03"
     scale: 4
+    visibleFromOtherGrids: true
     requireNoGrid: true
     shape: hexagon
   - type: TimedDespawn

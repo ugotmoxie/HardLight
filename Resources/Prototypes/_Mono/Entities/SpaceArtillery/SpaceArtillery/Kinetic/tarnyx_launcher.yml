@@ -49,6 +49,7 @@
   - type: RadarBlip
     radarColor: "#035EFC"
     scale: 2.5
+    visibleFromOtherGrids: true
   - type: ShipGunType
     shipType: Energy
   - type: ShipGunClass
@@ -90,6 +91,7 @@
   - type: RadarBlip
     radarColor: "#035EFC"
     scale: 2.5
+    visibleFromOtherGrids: true
   - type: ShipGunType
     shipType: Energy
   - type: ShipGunClass

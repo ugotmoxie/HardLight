@@ -12,6 +12,7 @@
         Piercing: 210
   - type: RadarBlip
     scale: 2.5
+    visibleFromOtherGrids: true
     requireNoGrid: true
     shape: triangle
   - type: Explosive

@@ -78,6 +78,7 @@
   - type: RadarBlip
     radarColor: "#FF0000"
     scale: 1
+    visibleFromOtherGrids: true
   - type: ShipGunType
     shipType: Ballistic
   - type: ShipGunClass
@@ -148,6 +149,7 @@
   - type: RadarBlip
     radarColor: "#FF0000"
     scale: 1.5
+    visibleFromOtherGrids: true
   - type: ShipGunType
     shipType: Ballistic
   - type: ShipGunClass
@@ -210,6 +212,7 @@
   - type: RadarBlip
     radarColor: "#FF0000"
     scale: 1.5
+    visibleFromOtherGrids: true
   - type: ShipGunType
     shipType: Ballistic
   - type: ShipGunClass
@@ -277,6 +280,7 @@
   - type: RadarBlip
     radarColor: "#FF0000"
     scale: 1.5
+    visibleFromOtherGrids: true
   - type: ShipGunType
     shipType: Ballistic
   - type: ShipGunClass
@@ -345,6 +349,7 @@
   - type: RadarBlip
     radarColor: "#FF0000"
     scale: 2
+    visibleFromOtherGrids: true
   - type: Destructible
     thresholds:
     - trigger:
@@ -424,6 +429,7 @@
   - type: RadarBlip
     radarColor: "#FF0000"
     scale: 2.5
+    visibleFromOtherGrids: true
   - type: Destructible
     thresholds:
     - trigger:
@@ -503,6 +509,7 @@
   - type: RadarBlip
     radarColor: "#FF0000"
     scale: 2
+    visibleFromOtherGrids: true
   - type: Destructible
     thresholds:
     - trigger:
@@ -587,6 +594,7 @@
   - type: RadarBlip
     radarColor: "#d53a3a"
     scale: 2
+    visibleFromOtherGrids: true
   - type: ShipGunType
     shipType: Ballistic
   - type: ShipGunClass
@@ -662,6 +670,7 @@
   - type: RadarBlip
     radarColor: "#03FC9D"
     scale: 3.5
+    visibleFromOtherGrids: true
   - type: ShipGunType
     shipType: Ballistic
   - type: ShipGunClass
@@ -737,6 +746,7 @@
   - type: RadarBlip
     radarColor: "#03FC9D"
     scale: 3
+    visibleFromOtherGrids: true
   - type: ShipGunType
     shipType: Ballistic
   - type: ShipGunClass
@@ -809,6 +819,7 @@
   - type: RadarBlip
     radarColor: "#FF0000"
     scale: 1
+    visibleFromOtherGrids: true
   - type: ShipGunType
     shipType: Ballistic
   - type: ShipGunClass
@@ -869,6 +880,7 @@
   - type: RadarBlip
     radarColor: "#FF0000"
     scale: 1.5
+    visibleFromOtherGrids: true
   - type: ShipGunType
     shipType: Ballistic
   - type: ShipGunClass
@@ -934,6 +946,7 @@
   - type: RadarBlip
     radarColor: "#FF0000"
     scale: 2.5
+    visibleFromOtherGrids: true
   - type: Destructible
     thresholds:
     - trigger:

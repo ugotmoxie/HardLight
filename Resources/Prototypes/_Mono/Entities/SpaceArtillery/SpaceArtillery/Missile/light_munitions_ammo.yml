@@ -30,6 +30,7 @@
   - type: RadarBlip
     radarColor: "#ffff00"
     scale: 2
+    visibleFromOtherGrids: true
     requireNoGrid: true
     shape: square
   - type: TimedDespawn
@@ -125,6 +126,7 @@
   - type: RadarBlip
     radarColor: "#ffff00"
     scale: 2
+    visibleFromOtherGrids: true
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
@@ -230,6 +232,7 @@
   - type: RadarBlip
     radarColor: "#CF0E0E"
     scale: 2
+    visibleFromOtherGrids: true
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
