@@ -724,6 +724,7 @@
   - type: DeviceLinkSink
     ports:
       - FillbotAnyItem
+  - type: OreSiloClient
 
 - type: entity
   id: MedicalTechFab
@@ -889,6 +890,7 @@
     - NFBioGenSeedsMedicalStatic # Frontier
     - NFBioGenSoil # Frontier
     - NFBioGenAnimalCubesStatic #Frontier
+  - type: OreSiloClient #Hardlight
   # Frontier: emag lathe recipes, item mapper
   - type: EmagLatheRecipes
     emagStaticPacks:
