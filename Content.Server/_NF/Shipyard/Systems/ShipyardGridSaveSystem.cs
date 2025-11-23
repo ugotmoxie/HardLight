@@ -176,10 +176,10 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
             // Per user request: before purging / serializing, add SecretStashComponent to any entity contained
             // directly within a secret stash so that they are also considered preserved.
             TagStashContents(gridUid);
-            
+
             // Clean up broken device links before serialization
             CleanupBrokenDeviceLinks(gridUid);
-            
+
             // Purge transient entities (unanchored or inside containers) before serialization.
             // This mutates the live grid, but only removes objects explicitly deemed non-persistent by design.
             PurgeTransientEntities(gridUid);
@@ -283,16 +283,16 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
         {
             var linksRemoved = 0;
             var sourcesProcessed = 0;
-            
+
             // Collect all entities on the grid with device link source components
             var sourceQuery = _entityManager.EntityQueryEnumerator<DeviceLinkSourceComponent, TransformComponent>();
             while (sourceQuery.MoveNext(out var sourceEnt, out var sourceComp, out var xform))
             {
                 if (xform.GridUid != gridUid)
                     continue;
-                
+
                 sourcesProcessed++;
-                
+
                 // Check LinkedPorts and remove links to entities that no longer exist
                 var brokenSinks = new List<EntityUid>();
                 foreach (var sinkEnt in sourceComp.LinkedPorts.Keys)
@@ -302,7 +302,7 @@ public sealed class ShipyardGridSaveSystem : EntitySystem
                         brokenSinks.Add(sinkEnt);
                     }
                 }
-                
+
                 // Use the DeviceLinkSystem to properly remove broken links
                 foreach (var brokenSink in brokenSinks)
                 {
