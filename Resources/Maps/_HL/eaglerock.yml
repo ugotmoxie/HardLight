@@ -77,8 +77,16 @@ entities:
     - type: OccluderTree
   - uid: 2
     components:
+    - type: BecomesStation
+      id: Eaglerock Outpost
     - type: MetaData
-      name: grid
+      name: Eaglerock
+    - type:
+    - type: SalvageMobRestrictionsGrid
+      mobsToKill: []
+    - type: NavMap
+    - type: WorldGenDistanceCarver
+      distanceThresholds: []
     - type: Transform
       pos: -0.5,-0.515625
       parent: 1

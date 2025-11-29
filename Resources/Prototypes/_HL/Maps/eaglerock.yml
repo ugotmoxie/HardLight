@@ -1,7 +1,7 @@
 - type: gameMap
   id: Eaglerock
-  mapName: 'Hardlight Eaglerock Station'
-  mapPath: Maps/_HL/eaglerock.yml
+  mapName: 'Eaglerock Outpost'
+  mapPath: /Maps/_HL/eaglerock.yml
   minPlayers: 0
   maxPlayers: 100
   stations:
@@ -9,7 +9,7 @@
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'HardLight Eaglerock Station'
+          mapNameTemplate: 'Eaglerock Outpost'
 #          nameGenerator:
 #            !type:NanotrasenNameGenerator
 #            prefixCreator: '14'
