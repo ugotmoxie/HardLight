@@ -5,3 +5,6 @@
 - type: npcFaction
   id: NFPirate
   hostile: [ PassiveAggressive ]
+
+- type: npcFaction
+  id: PassiveAggressive

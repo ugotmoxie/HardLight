@@ -8,3 +8,4 @@
     layers:
     - state: orange
     - state: idprisoner
+  - type: GenpopIdCard

@@ -1,0 +1,5 @@
+- type: department
+  id: PMC
+  name: Private Military Contractor
+  description: PMC Department
+  color: "#4D4D4D"

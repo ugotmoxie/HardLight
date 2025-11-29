@@ -1,0 +1,39 @@
+# Pirate ID Cards
+- type: entity
+  parent: IDCardStandard
+  id: NFPirateIDCard
+  name: pirate ID card
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/id_cards.rsi
+    layers:
+    - state: default
+    - state: idpirate
+  - type: PresetIdCard
+    job: Pirate
+
+- type: entity
+  parent: IDCardStandard
+  id: NFPirateCaptainIDCard
+  name: pirate captain ID card
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/id_cards.rsi
+    layers:
+    - state: silver
+    - state: idpiratecaptain
+  - type: PresetIdCard
+    job: PirateCaptain
+
+- type: entity
+  parent: IDCardStandard
+  id: NFPirateFirstMateIDCard
+  name: pirate first mate ID card
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/id_cards.rsi
+    layers:
+    - state: default
+    - state: idpiratefirstmate
+  - type: PresetIdCard
+    job: PirateFirstMate
