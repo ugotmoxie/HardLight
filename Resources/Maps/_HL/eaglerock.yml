@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 11/30/2025 17:13:33
-  entityCount: 21368
+  time: 11/30/2025 17:26:02
+  entityCount: 21372
 maps:
 - 1
 grids:
@@ -3419,8 +3419,7 @@ entities:
           -4,-1:
             0: 63952
           -4,0:
-            0: 26144
-            2: 64
+            0: 26208
           -5,0:
             0: 56789
           -4,1:
@@ -3919,13 +3918,13 @@ entities:
           -10,1:
             0: 61167
           -10,2:
-            3: 61152
+            2: 61152
           -10,3:
             0: 61152
           -10,4:
             0: 65278
           -9,2:
-            3: 30576
+            2: 30576
             0: 2
           -9,4:
             0: 65535
@@ -4359,20 +4358,20 @@ entities:
             0: 32904
           12,9:
             0: 4095
-            4: 4096
-            5: 49152
+            3: 4096
+            4: 49152
           11,9:
             0: 4095
-            4: 32768
-            5: 12288
+            3: 32768
+            4: 12288
           12,10:
-            4: 17
+            3: 17
             1: 61440
-            5: 204
+            4: 204
           11,10:
-            4: 136
+            3: 136
             1: 61440
-            5: 51
+            4: 51
           13,10:
             1: 61694
           13,9:
@@ -4387,13 +4386,13 @@ entities:
             1: 29813
           8,9:
             0: 16383
-            6: 32768
+            5: 32768
           7,9:
             0: 49148
           8,10:
             0: 51
             1: 61440
-            6: 136
+            5: 136
           7,10:
             0: 187
             1: 61440
@@ -4403,22 +4402,22 @@ entities:
             1: 65535
           9,9:
             0: 4095
-            6: 4096
-            7: 49152
+            5: 4096
+            6: 49152
           9,10:
-            6: 17
+            5: 17
             1: 61440
-            7: 204
+            6: 204
           9,11:
             1: 13107
           9,12:
             1: 8738
           10,9:
             0: 4095
-            5: 24576
+            4: 24576
           10,10:
             1: 61440
-            5: 102
+            4: 102
           3,8:
             0: 61678
           4,9:
@@ -5025,21 +5024,6 @@ entities:
           moles:
           - 0
           - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-          - 0
-        - volume: 2500
-          temperature: 293.1499
-          moles:
-          - 18.472576
-          - 69.49208
           - 0
           - 0
           - 0
@@ -7906,7 +7890,7 @@ entities:
       pos: -21.5,45.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -23157.53
+      secondsUntilStateChange: -23285.234
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -8654,7 +8638,7 @@ entities:
       pos: -23.5,-12.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -109471.99
+      secondsUntilStateChange: -109599.695
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -8666,7 +8650,7 @@ entities:
       pos: -23.5,-13.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -109662.39
+      secondsUntilStateChange: -109790.09
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -8699,7 +8683,7 @@ entities:
       pos: -23.5,-1.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -101301.05
+      secondsUntilStateChange: -101428.75
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -8784,7 +8768,7 @@ entities:
       pos: 21.5,-13.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -90691.49
+      secondsUntilStateChange: -90819.195
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -8830,7 +8814,7 @@ entities:
       pos: 23.5,-5.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -60662.19
+      secondsUntilStateChange: -60789.9
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9064,7 +9048,7 @@ entities:
       pos: 20.5,17.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -60210.125
+      secondsUntilStateChange: -60337.832
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9796,7 +9780,7 @@ entities:
       pos: -23.5,39.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -17635.27
+      secondsUntilStateChange: -17762.975
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -22761,6 +22745,11 @@ entities:
     - type: Transform
       pos: 17.5,27.5
       parent: 2
+  - uid: 12337
+    components:
+    - type: Transform
+      pos: 57.5,23.5
+      parent: 2
   - uid: 12452
     components:
     - type: Transform
@@ -24540,6 +24529,11 @@ entities:
     components:
     - type: Transform
       pos: -21.5,13.5
+      parent: 2
+  - uid: 15122
+    components:
+    - type: Transform
+      pos: 58.5,23.5
       parent: 2
   - uid: 15167
     components:
@@ -28056,6 +28050,11 @@ entities:
     - type: Transform
       pos: 36.5,-30.5
       parent: 2
+  - uid: 20975
+    components:
+    - type: Transform
+      pos: 59.5,23.5
+      parent: 2
   - uid: 21210
     components:
     - type: Transform
@@ -28395,6 +28394,11 @@ entities:
     components:
     - type: Transform
       pos: 0.5,31.5
+      parent: 2
+  - uid: 21372
+    components:
+    - type: Transform
+      pos: 60.5,23.5
       parent: 2
 - proto: CableApcStack
   entities:
@@ -67547,16 +67551,7 @@ entities:
       parent: 2
     - type: AtmosPipeLayers
       pipeLayer: Tertiary
-- proto: GasPassiveGateAlt1
-  entities:
-  - uid: 20585
-    components:
-    - type: Transform
-      pos: -0.5,63.5
-      parent: 2
-    - type: AtmosPipeColor
-      color: '#0335FCFF'
-- proto: GasPassiveVent
+- proto: GasOutletInjectorHighFlow
   entities:
   - uid: 7735
     components:
@@ -67579,6 +67574,17 @@ entities:
       parent: 2
     - type: AtmosPipeColor
       color: '#0055CCFF'
+- proto: GasPassiveGateAlt1
+  entities:
+  - uid: 20585
+    components:
+    - type: Transform
+      pos: -0.5,63.5
+      parent: 2
+    - type: AtmosPipeColor
+      color: '#0335FCFF'
+- proto: GasPassiveVent
+  entities:
   - uid: 11100
     components:
     - type: Transform
@@ -106367,11 +106373,15 @@ entities:
       rot: 3.141592653589793 rad
       pos: 54.5,34.5
       parent: 2
+    - type: AtmosPipeColor
+      color: '#FF1212FF'
   - uid: 10892
     components:
     - type: Transform
       pos: 53.5,34.5
       parent: 2
+    - type: AtmosPipeColor
+      color: '#0055CCFF'
 - proto: GasVolumePumpOn
   entities:
   - uid: 10265
