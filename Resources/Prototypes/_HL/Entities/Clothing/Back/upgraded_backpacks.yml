@@ -41,7 +41,7 @@
     walkModifier: 1
     sprintModifier: 0.85
     
-    - type: entity
+- type: entity
   id: ClothingRucksack
   name: rucksack
   parent: [ NFClothingDuffel, RecyclableItemClothDurable ]
