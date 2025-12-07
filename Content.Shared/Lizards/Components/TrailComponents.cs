@@ -17,4 +17,5 @@ public sealed partial class TrailFollowerComponent : Component
     [DataField] public int Delay = 4;
     [DataField] public float Offset = 0.0f; // units behind along facing
     [DataField] public float SmoothFactor = 0.0f; // 0 = snap, 0.1..1 = interpolate
+    [DataField] public float RotationOffsetDeg = -90f; // adjust sprite forward axis
 }

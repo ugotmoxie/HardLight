@@ -94,9 +94,9 @@ public sealed class SpriteTrailServerSystem : EntitySystem
             {
                 // Even when stationary, align rotation toward the leader's position
                 var dir = targetWorld.Position - xform.WorldPosition;
-                // Apply sprite forward offset so sprites aren't sideways
-                const float spriteForwardOffsetDeg = -90f;
-                var desiredRot = dir.LengthSquared() > 0f ? Angle.FromDegrees((float)(Math.Atan2(dir.Y, dir.X) * 180.0 / Math.PI) + spriteForwardOffsetDeg) : target.Item2;
+                var desiredRot = dir.LengthSquared() > 0f
+                    ? Angle.FromDegrees((float)(Math.Atan2(dir.Y, dir.X) * 180.0 / Math.PI) + follower.RotationOffsetDeg)
+                    : target.Item2;
                 _xformSys.SetLocalRotation(uid, desiredRot);
                 continue;
             }
@@ -114,8 +114,9 @@ public sealed class SpriteTrailServerSystem : EntitySystem
             }
             // Smoothly rotate to face the leader/target direction
             var dir2 = targetWorld.Position - _xformSys.GetWorldPosition(uid);
-            const float spriteForwardOffsetDeg2 = -90f;
-            var desired = dir2.LengthSquared() > 0f ? Angle.FromDegrees((float)(Math.Atan2(dir2.Y, dir2.X) * 180.0 / Math.PI) + spriteForwardOffsetDeg2) : target.Item2;
+            var desired = dir2.LengthSquared() > 0f
+                ? Angle.FromDegrees((float)(Math.Atan2(dir2.Y, dir2.X) * 180.0 / Math.PI) + follower.RotationOffsetDeg)
+                : target.Item2;
             if (follower.SmoothFactor > 0f)
             {
                 var curr = xform.LocalRotation;

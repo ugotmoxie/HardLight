@@ -18,8 +18,9 @@
     state: segment
   - type: TrailLeader
   - type: TrailFollower
-    delay: 6
-    smoothFactor: 0.3
+    delay: 4
+    smoothFactor: 0.25
+    rotationOffsetDeg: 90
 
 - type: entity
   id: HL_LizardBody2
@@ -31,7 +32,8 @@
   - type: TrailLeader
   - type: TrailFollower
     delay: 6
-    smoothFactor: 0.3
+    smoothFactor: 0.30
+    rotationOffsetDeg: 90
 
 - type: entity
   id: HL_LizardTailTip
@@ -42,4 +44,5 @@
     state: tip
   - type: TrailFollower
     delay: 6
-    smoothFactor: 0.3
+    smoothFactor: 0.35
+    rotationOffsetDeg: 90
