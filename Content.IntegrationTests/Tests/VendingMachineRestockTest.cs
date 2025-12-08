@@ -21,6 +21,7 @@ namespace Content.IntegrationTests.Tests
     public sealed class VendingMachineRestockTest : EntitySystem
     {
         [TestPrototypes]
+        private const string Blunt = "Blunt";
         private const string Prototypes = @"
 - type: entity
   name: HumanVendingDummy
@@ -251,7 +252,7 @@ namespace Content.IntegrationTests.Tests
                 systemMachine.EjectRandom(machine, false, true, machineComponent);
                 Assert.That(systemMachine.GetAvailableInventory(machine, machineComponent), Has.Count.EqualTo(0),
                     "Machine inventory is not empty after ejecting.");
-                
+
                 // Test that the inventory is actually restocked.
                 systemMachine.TryRestockInventory(machine, machineComponent);
                 Assert.That(systemMachine.GetAvailableInventory(machine, machineComponent), Has.Count.GreaterThan(0),
@@ -295,7 +296,7 @@ namespace Content.IntegrationTests.Tests
                     "Did not start with zero ramen.");
 
                 restock = entityManager.SpawnEntity("TestRestockExplode", coordinates);
-                var damageSpec = new DamageSpecifier(prototypeManager.Index<DamageTypePrototype>("Blunt"), 100);
+                var damageSpec = new DamageSpecifier(prototypeManager.Index<DamageTypePrototype>(Blunt), 100);
                 var damageResult = damageableSystem.TryChangeDamage(restock, damageSpec);
 
 #pragma warning disable NUnit2045
