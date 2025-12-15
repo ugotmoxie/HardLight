@@ -37,6 +37,8 @@
     LFoot: MobSkrellLFoot
     RFoot: MobSkrellRFoot
     RArmExtension: MobHumanoidAnyMarking
+    UndergarmentTop: MobHumanoidAnyMarking
+    UndergarmentBottom: MobHumanoidAnyMarking
 
 - type: markingPoints
   id: MobSkrellMarkingLimits
