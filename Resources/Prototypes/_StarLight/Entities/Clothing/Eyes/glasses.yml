@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ClothingEyesBase, BaseMajorContraband]
+  parent: [ClothingEyesBase, BaseC2Contraband]
   id: ClothingEyesGlassesNullSpace
   name: nullspace goggles
   description: An unusual pair of goggles developed during a time of inhumane experimentation involving Shadekin. They are designed to allow the wearer to peer into NullSpace.

@@ -1,6 +1,6 @@
    
 - type: emoteSounds
-  id: MaleShadekin
+  id: ShadekinMale
   params:
     variation: 0.125
   sounds:
@@ -40,7 +40,7 @@
       collection: FelionoidGrowls
 
 - type: emoteSounds
-  id: FemaleShadekin
+  id: ShadekinFemale
   params:
     variation: 0.125
   sounds:

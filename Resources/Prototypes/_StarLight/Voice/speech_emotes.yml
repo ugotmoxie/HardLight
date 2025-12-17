@@ -1,5 +1,5 @@
 - type: emote
-  id: Mar
+  id: ShadekinMar
   name: chat-emote-name-mar
   category: Vocal
   available: false
@@ -21,7 +21,7 @@
     - mars?
 
 - type: emote
-  id: Wurble
+  id: ShadekinWurble
   name: chat-emote-name-wurble
   category: Vocal
   available: false

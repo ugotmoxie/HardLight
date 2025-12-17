@@ -1,8 +1,8 @@
-
-- type: collectiveMind
-  id: Empathy
+# Converted to an entity prototype to avoid unknown prototype type errors.
+- type: entity
+  id: CollectiveMindEmpathy
   name: collective-mind-empathy
-  keycode: 'e'
-  color: "#8a0060"
-  requiredComponents: 
-  - Shadekin
+  components:
+  - type: Tag
+    tags:
+    - CollectiveMindEmpathy
