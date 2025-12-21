@@ -1,0 +1,51 @@
+# Synth markings
+
+# tail
+
+- type: marking
+  id: SynthTail
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [ Synth ]
+  sprites:
+  - sprite: _Liv/Mobs/Customization/Synth/tails.rsi
+    state: tail_synth
+
+# snout
+
+- type: marking
+  id: SynthVisor
+  bodyPart: Snout
+  markingCategory: Snout
+  speciesRestriction: [ Synth ]
+  sprites:
+  - sprite: _Liv/Mobs/Customization/Synth/snouts.rsi
+    state: visor_synth
+  - sprite: _Liv/Mobs/Customization/Synth/snouts.rsi
+    state: frame_synth
+  - sprite: _Liv/Mobs/Customization/Synth/snouts.rsi
+    state: snout_synth
+  - sprite: _Liv/Mobs/Customization/Synth/snouts.rsi
+    state: jaw_synth
+
+# eyes
+
+- type: marking
+  id: SynthEyesGlow
+  bodyPart: Eyes
+  markingCategory: Head
+  speciesRestriction: [ Synth ]
+  sprites:
+  - sprite: _Liv/Mobs/Customization/Synth/eyes.rsi
+    state: eyes_synth_glow
+  shader: unshaded
+    
+# alternate snout
+
+# horns
+
+# horns with lights
+
+# Chest
+
+# Chest w/ Lights
