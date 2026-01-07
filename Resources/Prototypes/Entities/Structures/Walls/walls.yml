@@ -1009,7 +1009,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 3600 # Mono - wall buff - 6x
+        damage: 400 # Mono - wall buff - 6x
       behaviors:
         - !type:DoActsBehavior
           acts: [ "Destruction" ]
@@ -1018,7 +1018,7 @@
             collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 1800 # Mono - wall buff - 6x
+        damage: 300 # Mono - wall buff - 6x
       behaviors:
       - !type:ChangeConstructionNodeBehavior
         node: girder
@@ -1027,6 +1027,8 @@
           collection: MetalSlam
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  - type: Reflect    # Frontier
+    reflectProb: 0.9 # Hardlight change, down to 0.2 from Frontier's 1
   - type: Construction
     graph: Girder
     node: diagonalshuttleWall
@@ -1047,7 +1049,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 3600 # Mono - wall buff - 6x
+        damage: 400 # Mono - wall buff - 6x
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -1056,7 +1058,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 2400 # Mono - wall buff - 6x
+        damage: 300 # Mono - wall buff - 6x
       behaviors:
       - !type:PlaySoundBehavior
         sound:
