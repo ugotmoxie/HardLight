@@ -411,3 +411,11 @@ Entries:
         space.
   id: 39
   time: '2026-01-14T00:12:12.0000000+00:00'
+- author: fenndragon
+  changes:
+    - type: Add
+      message: >-
+        added basic segmented entities and a couple rainlizards for testing
+        purposes 
+  id: 40
+  time: '2026-01-14T00:31:10.0000000+00:00'
