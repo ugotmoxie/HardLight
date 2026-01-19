@@ -565,3 +565,9 @@ Entries:
       message: Added Silica to the map pool
   id: 59
   time: '2026-01-19T04:07:57.0000000+00:00'
+- author: Tichi
+  changes:
+    - type: Add
+      message: Egg laying trait
+  id: 60
+  time: '2026-01-19T04:35:28.0000000+00:00'
