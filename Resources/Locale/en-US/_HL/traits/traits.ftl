@@ -25,3 +25,6 @@ natural-regeneration-name = natural regeneration
 natural-regeneration-text = naturally capable of healing from lesser injuries.
 unnatural-regeneration-name = unnatural regeneration
 unnatural-regeneration-text = capable of healing from most injuries with unnatural efficiency.
+
+hl-trait-egglayer-name = Egg Layer
+hl-trait-egglayer-desc = Your body is a machine that turns cum into eggs.
