@@ -619,3 +619,11 @@ Entries:
       message: 'Fixed Atmos calculation and spacing. '
   id: 66
   time: '2026-01-22T05:16:51.0000000+00:00'
+- author: warcrazed11
+  changes:
+    - type: Tweak
+      message: Tweaked caches and dungeon spawn radius.
+    - type: Tweak
+      message: Tweaked cache and vault map to add more danger and loot to them.
+  id: 67
+  time: '2026-01-22T05:23:14.0000000+00:00'
