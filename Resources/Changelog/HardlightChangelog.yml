@@ -627,3 +627,11 @@ Entries:
       message: Tweaked cache and vault map to add more danger and loot to them.
   id: 67
   time: '2026-01-22T05:23:14.0000000+00:00'
+- author: rtasva
+  changes:
+    - type: Add
+      message: Ported numerous benches and sofas made by Conflee
+    - type: Add
+      message: Ported desktop PC consoles made by Citrea
+  id: 68
+  time: '2026-01-22T06:25:01.0000000+00:00'
