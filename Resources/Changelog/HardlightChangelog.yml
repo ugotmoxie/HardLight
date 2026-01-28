@@ -760,3 +760,11 @@ Entries:
       message: 'Fixed produce stacks not functioning properly in relation to machines. '
   id: 80
   time: '2026-01-28T04:43:46.0000000+00:00'
+- author: Generic_Eagle
+  changes:
+    - type: Add
+      message: Added a new area to Eaglerock with a reporter!
+    - type: Tweak
+      message: Eaglerock now has infinite contractor slots
+  id: 81
+  time: '2026-01-28T04:44:12.0000000+00:00'
