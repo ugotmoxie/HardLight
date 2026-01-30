@@ -798,3 +798,9 @@ Entries:
       message: Doubled Gas deposit size.
   id: 84
   time: '2026-01-30T17:10:02.0000000+00:00'
+- author: warcrazed11
+  changes:
+    - type: Add
+      message: Added AAC tablet!
+  id: 85
+  time: '2026-01-30T17:10:26.0000000+00:00'
