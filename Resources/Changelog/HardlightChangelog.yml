@@ -804,3 +804,19 @@ Entries:
       message: Added AAC tablet!
   id: 85
   time: '2026-01-30T17:10:26.0000000+00:00'
+- author: NotLivyathan
+  changes:
+    - type: Add
+      message: Added Unborgable and Uncloneable traits from DeltaV.
+    - type: Remove
+      message: >-
+        Blacklisted Synths, IPC, and Cyborgs from several traits that didn't
+        make sense for them to have access to, including: Inoculated,
+        Unnatural/Natural Regeneration, Synthetic, Unrevivable (IPC), and Horny
+        (Synths).
+    - type: Remove
+      message: Cyborgs can no longer benefit from Unnatural Regeneration.
+    - type: Remove
+      message: Synths and IPC can no longer be cloned.
+  id: 86
+  time: '2026-01-30T17:11:20.0000000+00:00'
