@@ -854,3 +854,9 @@ Entries:
       message: Eaglerock cargo can now sell exped disks
   id: 90
   time: '2026-01-31T02:16:11.0000000+00:00'
+- author: rtasva
+  changes:
+    - type: Add
+      message: added exped disk printer to every map
+  id: 91
+  time: '2026-01-31T03:17:31.0000000+00:00'
