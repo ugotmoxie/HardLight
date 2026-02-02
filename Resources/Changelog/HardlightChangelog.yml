@@ -876,3 +876,9 @@ Entries:
         window already open.
   id: 92
   time: '2026-01-31T06:03:20.0000000+00:00'
+- author: warcrazed11
+  changes:
+    - type: Fix
+      message: Fixed multiple bugs with shadekin.
+  id: 93
+  time: '2026-02-02T17:26:45.0000000+00:00'
