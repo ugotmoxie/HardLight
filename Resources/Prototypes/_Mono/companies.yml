@@ -142,6 +142,12 @@
   form: Protagonist
   name: Dominos Robotics
   color: "#9900ff" # neon purple
+  
+- type: company
+  id: TALON
+  form: Protagonist
+  name: ADF-TALON
+  color: "#FFA500" #neon orange
 
 # ====Rogue / Antag. Companies====
 - type: company
