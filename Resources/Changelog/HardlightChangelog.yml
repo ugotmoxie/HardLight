@@ -1044,3 +1044,9 @@ Entries:
         when saved on a ship.
   id: 108
   time: '2026-02-09T23:34:31.0000000+00:00'
+- author: NotLivyathan
+  changes:
+    - type: Add
+      message: Ported Martial Arts from Goobstation.
+  id: 109
+  time: '2026-02-09T23:35:33.0000000+00:00'
