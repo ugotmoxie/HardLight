@@ -1064,3 +1064,9 @@ Entries:
       message: Dominos Robotics to the Factions tab of the pallet menu
   id: 110
   time: '2026-02-09T23:43:38.0000000+00:00'
+- author: re-silvered
+  changes:
+    - type: Add
+      message: Biting and checking out as interaction options
+  id: 111
+  time: '2026-02-09T23:47:00.0000000+00:00'
