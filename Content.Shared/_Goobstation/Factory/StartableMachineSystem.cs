@@ -1,6 +1,7 @@
 using Content.Shared.DeviceLinking;
 using Content.Shared.DeviceLinking.Events;
 using Content.Shared.Power.EntitySystems;
+using Robust.Shared.Timing;
 
 namespace Content.Shared._Goobstation.Factory;
 
@@ -8,8 +9,13 @@ public sealed class StartableMachineSystem : EntitySystem
 {
     [Dependency] private readonly SharedDeviceLinkSystem _device = default!;
     [Dependency] private readonly SharedPowerReceiverSystem _power = default!;
+    [Dependency] private readonly IGameTiming _timing = default!;
 
     private EntityQuery<StartableMachineComponent> _query;
+
+    // HardLight change: Add update interval instead of checking every tick
+    private TimeSpan _nextUpdate = TimeSpan.Zero;
+    private static readonly TimeSpan _updateDelay = TimeSpan.FromSeconds(1);
 
     public override void Initialize()
     {
@@ -23,6 +29,14 @@ public sealed class StartableMachineSystem : EntitySystem
 
     public override void Update(float frameTime)
     {
+        var now = _timing.CurTime;
+        
+        // HardLight change: Only check for queued autostarts every 1 second because autostart isn't time sensitive. Can be adjusted on line 18
+        if (now < _nextUpdate)
+            return;
+        
+        _nextUpdate = now + _updateDelay;
+
         var query = EntityQueryEnumerator<StartableMachineComponent>();
         while (query.MoveNext(out var uid, out var comp))
         {

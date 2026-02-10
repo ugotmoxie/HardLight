@@ -21,9 +21,20 @@ public sealed class RadCollectorSignalSystem : EntitySystem
     public static readonly ProtoId<SourcePortPrototype> LowPort = "RadLow";
     public static readonly ProtoId<SourcePortPrototype> FullPort = "RadFull";
 
+    // Performance optimization: Only update every 5 seconds instead of every tick
+    private float _updateAccumulator = 0f;
+    private const float UpdateInterval = 5.0f;
+
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
+
+        // Accumulate time and only run update logic every UpdateInterval seconds
+        _updateAccumulator += frameTime;
+        if (_updateAccumulator < UpdateInterval)
+            return;
+        
+        _updateAccumulator -= UpdateInterval;
 
         var query = EntityQueryEnumerator<RadCollectorSignalComponent>();
         while (query.MoveNext(out var uid, out var comp))
