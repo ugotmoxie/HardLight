@@ -1152,3 +1152,11 @@ Entries:
       message: Added the volkite calvalier, Pistol, Charger, and Culverin
   id: 120
   time: '2026-02-14T22:53:21.0000000+00:00'
+- author: TrylobyteWasTaken
+  changes:
+    - type: Fix
+      message: Inflatable floors are no longer ripped up by spacing.
+    - type: Tweak
+      message: Inflatable floors are now deconstructed with a screwdriver.
+  id: 121
+  time: '2026-02-14T22:54:23.0000000+00:00'
