@@ -1176,3 +1176,13 @@ Entries:
       message: 'Added CC SOF Intelligence "LAMBA" operatives. '
   id: 123
   time: '2026-02-17T23:54:02.0000000+00:00'
+- author: Suraru
+  changes:
+    - type: Add
+      message: Added AME controllers to flatpack vending machine
+    - type: Tweak
+      message: Increased auto-cryo from 5m to 15m
+    - type: Tweak
+      message: greatly increases dock spawning radius
+  id: 124
+  time: '2026-02-17T23:54:23.0000000+00:00'
