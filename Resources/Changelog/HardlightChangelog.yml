@@ -1168,3 +1168,11 @@ Entries:
       message: Added a new UNMC vending machine to the exped spawn pool
   id: 122
   time: '2026-02-17T23:53:16.0000000+00:00'
+- author: Suraru
+  changes:
+    - type: Add
+      message: Added CC Directorate
+    - type: Add
+      message: 'Added CC SOF Intelligence "LAMBA" operatives. '
+  id: 123
+  time: '2026-02-17T23:54:02.0000000+00:00'
