@@ -1194,3 +1194,9 @@ Entries:
       message: Changed the volkite damage and fire rate.
   id: 125
   time: '2026-02-17T23:56:54.0000000+00:00'
+- author: fenndragon
+  changes:
+    - type: Add
+      message: Added per character apartment system
+  id: 126
+  time: '2026-02-18T00:02:16.0000000+00:00'
