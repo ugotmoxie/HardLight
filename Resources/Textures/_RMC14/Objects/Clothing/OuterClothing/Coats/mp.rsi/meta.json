@@ -11,14 +11,7 @@
       "name": "icon"
     },
     {
-      "name": "icon-open"
-    },
-    {
       "name": "equipped-OUTERCLOTHING",
-      "directions": 4
-    },
-    {
-      "name": "open-equipped-OUTERCLOTHING",
       "directions": 4
     }
   ]

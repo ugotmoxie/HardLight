@@ -8,18 +8,11 @@
   },
   "states": [
     {
-      "name": "equipped-OUTERCLOTHING",
-      "directions": 4
-    },
-    {
-      "name": "jacket-equipped-OUTERCLOTHING",
-      "directions": 4
-    },
-    {
       "name": "icon"
     },
     {
-      "name": "jacket-icon"
+      "name": "equipped-OUTERCLOTHING",
+      "directions": 4
     }
-]
+  ]
 }
