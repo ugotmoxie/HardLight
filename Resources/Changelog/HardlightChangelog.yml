@@ -1186,3 +1186,11 @@ Entries:
       message: greatly increases dock spawning radius
   id: 124
   time: '2026-02-17T23:54:23.0000000+00:00'
+- author: warcrazed11
+  changes:
+    - type: Add
+      message: Added Dart gun, printable in the med techfab!
+    - type: Tweak
+      message: Changed the volkite damage and fire rate.
+  id: 125
+  time: '2026-02-17T23:56:54.0000000+00:00'
