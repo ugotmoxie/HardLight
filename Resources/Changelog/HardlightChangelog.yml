@@ -1238,3 +1238,9 @@ Entries:
       message: Adds the pissing trait. It... lets you piss...
   id: 129
   time: '2026-02-19T05:01:15.0000000+00:00'
+- author: Suraru
+  changes:
+    - type: Tweak
+      message: You can now eat money
+  id: 130
+  time: '2026-02-19T05:03:00.0000000+00:00'
