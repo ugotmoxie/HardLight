@@ -1200,3 +1200,27 @@ Entries:
       message: Added per character apartment system
   id: 126
   time: '2026-02-18T00:02:16.0000000+00:00'
+- author: NotLivyathan
+  changes:
+    - type: Add
+      message: Client-sided wall-based ambient occlusion for soft shadows around walls.
+    - type: Add
+      message: >-
+        Grids that would reasonably have roofs now have roofs that block weather
+        effects and gas overlays.
+    - type: Tweak
+      message: >-
+        AME fuel jars and rad collector plasma tanks now persist on save/load
+        when contained within an AME/rad collector.
+    - type: Tweak
+      message: Crates can once again be anchored.
+    - type: Fix
+      message: False walls will no longer revert states when welded during save/load.
+    - type: Fix
+      message: >-
+        Airlocks, gas canisters, lockers, and crates no longer lose custom
+        paintjobs on save/load.
+    - type: Fix
+      message: 'Custom lights no longer revert to default lights on save/load. '
+  id: 127
+  time: '2026-02-19T04:58:43.0000000+00:00'
